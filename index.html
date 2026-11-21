@@ -19,464 +19,574 @@
 <main>
 <section class="hero" id="heroSection"><div class="wrap hero-grid"><div><span class="eyebrow" id="heroEyebrow">TALENTO · OPORTUNIDADES · CONEXIONES</span><h1 id="heroTitle">Tu próximo paso profesional empieza con una buena conexión.</h1><p id="heroDesc">Matchar ATS ayuda a presentar tu experiencia de forma clara, detectar oportunidades de mejora en tu CV y acercarte a quienes buscan talento. Una plataforma simple, accesible y pensada para el mercado argentino: menos barreras, más posibilidades.</p><div class="hero-actions"><a class="btn primary" href="#postular">Evaluar mi CV <span>→</span></a><a class="btn white" href="#directorio">Explorar perfiles</a></div><div style="margin-top:19px"><span class="verified">✓ 100% VERIFICADO</span></div></div><aside class="hero-card"><h3>Una presentación profesional, sin vueltas.</h3><p>Herramientas prácticas para mejorar cómo mostrás tu perfil laboral.</p><div class="metric"><span>Análisis inicial del CV</span><b>Local y privado*</b></div><div class="metric"><span>Perfiles publicados</span><b>Con aprobación</b></div><div class="metric" id="heroPriceRow"><span>Tarifa de publicación</span><b id="heroPrice">$10.000 ARS</b></div><div class="metric"><span>Contacto</span><b>Directo por WhatsApp</b></div><p style="font-size:10px;margin:13px 0 0">*El análisis se realiza en este dispositivo. No equivale a una certificación ni garantiza entrevistas.</p></aside></div></section>
 <section class="section" id="como-funciona"><div class="wrap"><div class="section-head"><div><h2 id="howTitle">Una herramienta concreta para avanzar</h2><p class="sub" id="howSub">Matchar ATS simplifica la presentación de perfiles y el primer contacto profesional.</p></div></div><div class="cards"><article class="card"><div class="step">01</div><h3>Analizá tu CV</h3><p>Subí tu archivo y recibí una evaluación orientativa de estructura, datos clave y términos relevantes para mejorar tu presentación.</p></article><article class="card"><div class="step">02</div><h3>Solicitá tu publicación</h3><p>Completá tus datos, aboná una tarifa accesible y enviá tu solicitud para revisión administrativa.</p></article><article class="card"><div class="step">03</div><h3>Conectá con oportunidades</h3><p>Una vez aprobado, tu perfil aparece en el directorio con acceso a tu CV y contacto directo por WhatsApp.</p></article></div><p class="notice" style="margin-top:18px"><b>Transparencia:</b> Matchar ATS es una herramienta de presentación y conexión. No es una agencia de empleo, no garantiza contrataciones y la insignia visual no acredita verificaciones externas.</p></div></section>
-<section class="section" id="postular" style="background:#EDF4FA"><div class="wrap"><div class="section-head"><div><h2 id="postTitle">Evaluá y publicá tu perfil</h2><p class="sub" id="postSub">Completá tus datos y adjuntá tu CV en PDF o Word.</p></div><span class="verified">✓ 100% VERIFICADO</span></div><div class="panel"><form id="candidateForm"><div class="form-grid"><div class="field"><label for="name">Nombre y apellido *</label><input id="name" required maxlength="90" autocomplete="name" placeholder="Ej. María Pérez"></div><div class="field"><label for="email">Correo electrónico *</label><input id="email" type="email" required maxlength="120" autocomplete="email" placeholder="nombre@email.com"></div><div class="field"><label for="whatsappInput">WhatsApp para contacto directo (código de área + número, sin +54) *</label><input id="whatsappInput" type="tel" inputmode="numeric" required maxlength="25" autocomplete="tel" placeholder="Ej. 2477123456"></div><div class="field"><label for="area">Apartado / Área *</label><select id="area" required></select></div><div class="field"><label for="modality">Modalidad del puesto *</label><select id="modality" required><option value="Remoto">Remoto</option><option value="Híbrido">Híbrido</option><option value="Presencial">Presencial</option></select></div><div class="field"><label for="role">Puesto o área de interés *</label><input id="role" required maxlength="90" autocomplete="organization-title" placeholder="Ej. Analista administrativo"></div><div class="field full"><label for="location">Ubicación obligatoria [Ciudad, Código Postal, Provincia, País] *</label><input id="location" required maxlength="140" autocomplete="address-level2" placeholder="Ej. Pergamino, 2700, Buenos Aires, Argentina"></div><div class="field full"><label for="skills">Habilidades principales</label><textarea id="skills" maxlength="1200" autocomplete="off" placeholder="Separá tus habilidades con comas. Ej. Excel, atención al cliente, SQL, ventas..."></textarea></div><div class="field full"><label for="cv">Adjuntá tu CV *</label><div class="upload"><input id="cv" type="file" accept=".pdf,.docx,.doc,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword" autocomplete="off" required><div class="hint">PDF, DOCX o DOC. Máximo recomendado: 8 MB. El archivo queda guardado en este navegador.</div><div id="fileName" class="hint"></div></div></div></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px"><button class="btn primary" type="button" id="analyzeBtn">Analizar CV gratis</button><button class="btn outline" type="submit" id="submitPostBtn">Continuar a publicación</button></div><div id="scoreBox" class="scorebox"><div class="scoreline"><div><b>Resultado orientativo del análisis ATS</b><div class="hint">No representa una puntuación universal ni predice decisiones de selección.</div></div><div class="score"><span id="scoreValue">0</span>/100</div></div><div class="progress"><span id="scoreBar"></span></div><ul id="suggestions" class="suggestions"></ul></div><div id="paymentBox" class="payment"><div id="paymentSectionInner"><h3 style="margin:0;color:var(--navy)">Paso final: abonar la tarifa de publicación</h3><p class="muted" style="font-size:13px;margin:5px 0">Tarifa vigente: <b id="paymentPrice">$10.000 ARS</b>. Realizá la transferencia y luego informá el pago para enviar tu solicitud a revisión.</p><div class="paydata"><div class="payitem"><small>Alias</small><b>abraham.safira</b><button type="button" class="btn soft small" onclick="copyText('abraham.safira')">Copiar</button></div><div class="payitem"><small>CBU / CVU</small><b>0000003100057643601332</b><button type="button" class="btn soft small" onclick="copyText('0000003100057643601332')">Copiar</button></div><div class="payitem"><small>Titular</small><b>Safira Yael Abraham</b></div><div class="payitem"><small>Medio</small><b>Transferencia bancaria</b></div></div><div class="notice">Importante: el sitio no procesa pagos ni confirma transferencias automáticamente. La administración verificará el ingreso del dinero antes de aprobar el perfil. No envíes datos bancarios sensibles ni claves.</div></div><div id="tipBox" class="tipbox"><b style="color:var(--navy);font-size:13px">Propina opcional</b><p class="muted" style="font-size:12px;margin:4px 0 0" id="tipMessage">Por la buena onda y el mantenimiento de la página, podés sumar una propina opcional.</p><div class="tip-options"><button type="button" class="btn outline small tip-choice" data-tip="0">Sin propina ($0)</button><button type="button" class="btn outline small tip-choice" data-tip="1000">$1.000</button><button type="button" class="btn outline small tip-choice" data-tip="2500">$2.500</button><button type="button" class="btn outline small tip-choice" data-tip="5000">$5.000</button><input id="customTip" type="number" min="0" step="100" placeholder="Otro monto ARS" style="max-width:140px;padding:7px 10px;border:1px solid #CAD7E2;border-radius:9px;font-size:12px"></div><div class="hint" style="margin-top:6px">Propina seleccionada: <b id="selectedTipLabel">$0</b></div></div><label style="display:flex;gap:9px;align-items:flex-start;margin:15px 0;font-size:13px" id="paidConfirmRow"><input type="checkbox" id="paidConfirm" autocomplete="off" style="margin-top:4px"> Declaro que realicé la transferencia por el importe indicado.</label><button class="btn primary" type="button" id="paidBtn">Informar pago realizado</button></div></form></div></div></section>
+<section class="section" id="postular" style="background:#EDF4FA"><div class="wrap"><div class="section-head"><div><h2 id="postTitle">Evaluá y publicá tu perfil</h2><p class="sub" id="postSub">Completá tus datos y adjuntá tu CV en PDF o Word.</p></div><span class="verified">✓ 100% VERIFICADO</span></div><div class="panel"><form id="candidateForm"><div class="form-grid"><div class="field"><label for="name">Nombre y apellido *</label><input id="name" required maxlength="90" autocomplete="name" placeholder="Ej. María Pérez"></div><div class="field"><label for="email">Correo electrónico *</label><input id="email" type="email" required maxlength="120" autocomplete="email" placeholder="nombre@email.com"></div><div class="field"><label for="whatsappInput">WhatsApp para contacto directo (código de área + número, sin +54) *</label><input id="whatsappInput" type="tel" inputmode="numeric" required maxlength="25" autocomplete="tel" placeholder="Ej. 2477123456"></div><div class="field"><label for="area">Apartado / Área *</label><select id="area" required></select></div><div class="field"><label for="modality">Modalidad del puesto *</label><select id="modality" required><option value="Remoto">Remoto</option><option value="Híbrido">Híbrido</option><option value="Presencial">Presencial</option></select></div><div class="field"><label for="role">Puesto o área de interés *</label><input id="role" required maxlength="90" autocomplete="organization-title" placeholder="Ej. Analista administrativo"></div><div class="field full"><label for="location">Ubicación obligatoria [Ciudad, Código Postal, Provincia, País] *</label><input id="location" required maxlength="140" autocomplete="address-level2" placeholder="Ej. Pergamino, 2700, Buenos Aires, Argentina"></div><div class="field full"><label for="skills">Habilidades principales</label><textarea id="skills" maxlength="1200" autocomplete="off" placeholder="Separá tus habilidades con comas. Ej. Excel, atención al cliente, SQL, ventas..."></textarea></div><div class="field full"><label for="cv">Adjuntá tu CV *</label><div class="upload"><input id="cv" type="file" accept=".pdf,.docx,.doc,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword" autocomplete="off" required><div class="hint">PDF, DOCX o DOC. Máximo recomendado: 8 MB. El archivo se analiza en este navegador.</div><div id="fileName" class="hint"></div></div></div></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px"><button class="btn primary" type="button" id="analyzeBtn">Analizar CV gratis</button><button class="btn outline" type="submit" id="submitPostBtn">Continuar a publicación</button></div><div id="scoreBox" class="scorebox"><div class="scoreline"><div><b>Resultado orientativo del análisis ATS</b><div class="hint">No representa una puntuación universal ni predice decisiones de selección.</div></div><div class="score"><span id="scoreValue">0</span>/100</div></div><div class="progress"><span id="scoreBar"></span></div><ul id="suggestions" class="suggestions"></ul></div><div id="paymentBox" class="payment"><div id="paymentSectionInner"><h3 style="margin:0;color:var(--navy)">Paso final: abonar la tarifa de publicación</h3><p class="muted" style="font-size:13px;margin:5px 0">Tarifa vigente: <b id="paymentPrice">$10.000 ARS</b>. Realizá la transferencia y luego informá el pago para enviar tu solicitud a revisión.</p><div class="paydata"><div class="payitem"><small>Alias</small><b>abraham.safira</b><button type="button" class="btn soft small" onclick="copyText('abraham.safira')">Copiar</button></div><div class="payitem"><small>CBU / CVU</small><b>0000003100057643601332</b><button type="button" class="btn soft small" onclick="copyText('0000003100057643601332')">Copiar</button></div><div class="payitem"><small>Titular</small><b>Safira Yael Abraham</b></div><div class="payitem"><small>Medio</small><b>Transferencia bancaria</b></div></div><div class="notice">Importante: el sitio no procesa pagos ni confirma transferencias automáticamente. La administración verificará el ingreso del dinero antes de aprobar el perfil. No envíes datos bancarios sensibles ni claves.</div></div><div id="tipBox" class="tipbox"><b style="color:var(--navy);font-size:13px">Propina opcional</b><p class="muted" style="font-size:12px;margin:4px 0 0" id="tipMessage">Por la buena onda y el mantenimiento de la página, podés sumar una propina opcional.</p><div class="tip-options"><button type="button" class="btn outline small tip-choice" data-tip="0">Sin propina ($0)</button><button type="button" class="btn outline small tip-choice" data-tip="1000">$1.000</button><button type="button" class="btn outline small tip-choice" data-tip="2500">$2.500</button><button type="button" class="btn outline small tip-choice" data-tip="5000">$5.000</button><input id="customTip" type="number" min="0" step="100" placeholder="Otro monto ARS" style="max-width:140px;padding:7px 10px;border:1px solid #CAD7E2;border-radius:9px;font-size:12px"></div><div class="hint" style="margin-top:6px">Propina seleccionada: <b id="selectedTipLabel">$0</b></div></div><label style="display:flex;gap:9px;align-items:flex-start;margin:15px 0;font-size:13px" id="paidConfirmRow"><input type="checkbox" id="paidConfirm" autocomplete="off" style="margin-top:4px"> Declaro que realicé la transferencia por el importe indicado.</label><button class="btn primary" type="button" id="paidBtn">Informar pago realizado</button></div></form></div></div></section>
 <section class="section" id="directorio"><div class="wrap"><div class="section-head"><div><h2 id="dirTitle">Directorio de talento</h2><p class="sub" id="dirSub">Perfiles aprobados disponibles para consulta y contacto.</p></div><span class="verified">✓ 100% VERIFICADO</span></div><div id="areaFilterBar" class="filterbar"></div><div id="directory" class="directory"><div class="empty">Todavía no hay perfiles publicados. ¡Sé el primero en sumarte!</div></div></div></section>
-<section class="section admin" id="admin"><div class="wrap"><div class="admin-head"><div><h2>Panel de administración</h2><p class="sub">Gestión de solicitudes, perfiles, áreas, textos y parámetros de la plataforma.</p></div><button class="btn outline small" onclick="logoutAdmin()">Cerrar sesión</button></div><div class="notice" style="margin-top:15px">Modo demostración estático: los datos se almacenan únicamente en este navegador. No existe sincronización entre visitantes ni control de acceso seguro en GitHub Pages.</div><div class="admin-grid"><div class="panel"><h3 style="margin-top:0;color:var(--navy)">Solicitudes pendientes</h3><div id="pendingList"><p class="muted">No hay solicitudes pendientes en este navegador.</p></div><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3 style="color:var(--navy)">Perfiles publicados</h3><div id="publishedList"><p class="muted">No hay perfiles publicados en este navegador.</p></div><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3 style="color:var(--navy)">Ocultar o mostrar selecciones / bloques</h3><div class="toggle-row"><span>Sección "Cómo funciona"</span><input type="checkbox" id="toggleHow" checked></div><div class="toggle-row"><span>Sección "Evaluá y publicá tu perfil"</span><input type="checkbox" id="togglePost" checked></div><div class="toggle-row"><span>Sección "Directorio de talento"</span><input type="checkbox" id="toggleDir" checked></div><div class="toggle-row"><span>Botón / flujo de pago</span><input type="checkbox" id="togglePayment" checked></div><div class="toggle-row"><span>Propina opcional ("buena onda y página")</span><input type="checkbox" id="toggleTip" checked></div><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3 style="color:var(--navy)">Apartados / Áreas (ocultar, mostrar y editar nombres)</h3><div id="areasAdminList"></div><div style="display:flex;gap:8px;margin-top:12px"><input id="newAreaName" placeholder="Nuevo apartado (ej. Producto / UX)" style="flex:1;border:1px solid #CAD7E2;border-radius:10px;padding:10px 12px"><button type="button" class="btn soft small" onclick="addArea()">Agregar</button></div></div><div class="panel"><h3 style="margin-top:0;color:var(--navy)">Configuración global local</h3><div class="field"><label for="fee">Tarifa de publicación (ARS)</label><input id="fee" type="number" min="0" step="100" value="10000" autocomplete="off"></div><div class="field" style="margin-top:12px"><label for="whatsapp">WhatsApp corporativo (código de área + número, sin +54)</label><input id="whatsapp" inputmode="numeric" autocomplete="off" placeholder="Ej. 91123456789"></div><div class="field" style="margin-top:12px"><label for="tipText">Mensaje de propina opcional</label><input id="tipText" autocomplete="off" placeholder="Por la buena onda y el mantenimiento de la página..."></div><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h4 style="margin:0 0 10px;color:var(--navy)">Editar títulos y textos principales</h4><div class="field"><label for="editHeroTitle">Título principal (Hero)</label><input id="editHeroTitle" autocomplete="off"></div><div class="field" style="margin-top:10px"><label for="editHeroDesc">Descripción principal (Hero)</label><textarea id="editHeroDesc" autocomplete="off" style="min-height:70px"></textarea></div><div class="field" style="margin-top:10px"><label for="editHowTitle">Título "Cómo funciona"</label><input id="editHowTitle" autocomplete="off"></div><div class="field" style="margin-top:10px"><label for="editPostTitle">Título formulario postulación</label><input id="editPostTitle" autocomplete="off"></div><div class="field" style="margin-top:10px"><label for="editDirTitle">Título directorio</label><input id="editDirTitle" autocomplete="off"></div><button class="btn primary" style="margin-top:14px" onclick="saveSettings()">Guardar configuración</button><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3 style="color:var(--navy)">Publicar mi propio CV</h3><p class="hint">Publicación administrativa directa, sin pago.</p><div class="field"><label for="adminName">Nombre</label><input id="adminName" value="Safira Yael Abraham" autocomplete="name"></div><div class="field" style="margin-top:10px"><label for="adminWhatsapp">WhatsApp de contacto (código de área + número, sin +54)</label><input id="adminWhatsapp" type="tel" inputmode="numeric" autocomplete="off" placeholder="Ej. 2477123456"></div><div class="field" style="margin-top:10px"><label for="adminArea">Apartado / Área</label><select id="adminArea"></select></div><div class="field" style="margin-top:10px"><label for="adminModality">Modalidad del puesto</label><select id="adminModality"><option value="Remoto">Remoto</option><option value="Híbrido">Híbrido</option><option value="Presencial">Presencial</option></select></div><div class="field" style="margin-top:10px"><label for="adminRole">Puesto / área</label><input id="adminRole" autocomplete="organization-title" placeholder="Ej. QA Manual Tester"></div><div class="field" style="margin-top:10px"><label for="adminLocation">Ubicación [Ciudad, Código Postal, Provincia, País] *</label><input id="adminLocation" value="Pergamino, 2700, Buenos Aires, Argentina" autocomplete="address-level2"></div><div class="field" style="margin-top:10px"><label for="adminSkills">Habilidades</label><textarea id="adminSkills" autocomplete="off" placeholder="QA Manual, testing funcional, SQL..."></textarea></div><div class="field" style="margin-top:10px"><label for="adminCv">Archivo CV (PDF/DOCX/DOC)</label><input id="adminCv" type="file" accept=".pdf,.docx,.doc" autocomplete="off"></div><button class="btn primary" style="margin-top:13px" onclick="publishAdmin()">Publicar mi CV</button></div></div></div></section>
+<section class="section admin" id="admin"><div class="wrap"><div class="admin-head"><div><h2>Panel de administración</h2><p class="sub">Gestión de solicitudes, perfiles, áreas, textos y parámetros de la plataforma.</p></div><button class="btn outline small" onclick="logoutAdmin()">Cerrar sesión</button></div><div class="notice" style="margin-top:15px">Perfiles y solicitudes sincronizados en la nube con Supabase. Solo tu cuenta autenticada (<b>abrahamsafirayael@gmail.com</b>) puede aprobar, editar o eliminar perfiles.</div><div class="admin-grid"><div class="panel"><h3 style="margin-top:0;color:var(--navy)">Solicitudes pendientes</h3><div id="pendingList"><p class="muted">No hay solicitudes pendientes.</p></div><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3 style="color:var(--navy)">Perfiles publicados</h3><div id="publishedList"><p class="muted">No hay perfiles publicados.</p></div><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3 style="color:var(--navy)">Ocultar o mostrar secciones / bloques</h3><div class="toggle-row"><span>Sección "Cómo funciona"</span><input type="checkbox" id="toggleHow" checked></div><div class="toggle-row"><span>Sección "Evaluá y publicá tu perfil"</span><input type="checkbox" id="togglePost" checked></div><div class="toggle-row"><span>Sección "Directorio de talento"</span><input type="checkbox" id="toggleDir" checked></div><div class="toggle-row"><span>Botón / flujo de pago</span><input type="checkbox" id="togglePayment" checked></div><div class="toggle-row"><span>Propina opcional ("buena onda y página")</span><input type="checkbox" id="toggleTip" checked></div><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3 style="color:var(--navy)">Apartados / Áreas (ocultar, mostrar y editar nombres)</h3><div id="areasAdminList"></div><div style="display:flex;gap:8px;margin-top:12px"><input id="newAreaName" placeholder="Nuevo apartado (ej. Producto / UX)" style="flex:1;border:1px solid #CAD7E2;border-radius:10px;padding:10px 12px"><button type="button" class="btn soft small" onclick="addArea()">Agregar</button></div></div><div class="panel"><h3 style="margin-top:0;color:var(--navy)">Configuración global</h3><div class="field"><label for="fee">Tarifa de publicación (ARS)</label><input id="fee" type="number" min="0" step="100" value="10000" autocomplete="off"></div><div class="field" style="margin-top:12px"><label for="whatsapp">WhatsApp corporativo (código de área + número, sin +54)</label><input id="whatsapp" inputmode="numeric" autocomplete="off" placeholder="Ej. 2477123456"></div><div class="field" style="margin-top:12px"><label for="tipText">Mensaje de propina opcional</label><input id="tipText" autocomplete="off" placeholder="Por la buena onda y el mantenimiento de la página..."></div><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h4 style="margin:0 0 10px;color:var(--navy)">Editar títulos y textos principales</h4><div class="field"><label for="editHeroTitle">Título principal (Hero)</label><input id="editHeroTitle" autocomplete="off"></div><div class="field" style="margin-top:10px"><label for="editHeroDesc">Descripción principal (Hero)</label><textarea id="editHeroDesc" autocomplete="off" style="min-height:70px"></textarea></div><div class="field" style="margin-top:10px"><label for="editHowTitle">Título "Cómo funciona"</label><input id="editHowTitle" autocomplete="off"></div><div class="field" style="margin-top:10px"><label for="editPostTitle">Título formulario postulación</label><input id="editPostTitle" autocomplete="off"></div><div class="field" style="margin-top:10px"><label for="editDirTitle">Título directorio</label><input id="editDirTitle" autocomplete="off"></div><button class="btn primary" style="margin-top:14px" onclick="saveSettings()">Guardar configuración</button><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3 style="color:var(--navy)">Publicar mi propio CV</h3><p class="hint">Publicación administrativa directa, sin pago.</p><div class="field"><label for="adminName">Nombre</label><input id="adminName" value="Safira Yael Abraham" autocomplete="name"></div><div class="field" style="margin-top:10px"><label for="adminWhatsapp">WhatsApp de contacto (código de área + número, sin +54)</label><input id="adminWhatsapp" type="tel" inputmode="numeric" autocomplete="off" placeholder="Ej. 2477123456"></div><div class="field" style="margin-top:10px"><label for="adminArea">Apartado / Área</label><select id="adminArea"></select></div><div class="field" style="margin-top:10px"><label for="adminModality">Modalidad del puesto</label><select id="adminModality"><option value="Remoto">Remoto</option><option value="Híbrido">Híbrido</option><option value="Presencial">Presencial</option></select></div><div class="field" style="margin-top:10px"><label for="adminRole">Puesto / área</label><input id="adminRole" autocomplete="organization-title" placeholder="Ej. QA Manual Tester"></div><div class="field" style="margin-top:10px"><label for="adminLocation">Ubicación [Ciudad, Código Postal, Provincia, País] *</label><input id="adminLocation" value="Pergamino, 2700, Buenos Aires, Argentina" autocomplete="address-level2"></div><div class="field" style="margin-top:10px"><label for="adminSkills">Habilidades</label><textarea id="adminSkills" autocomplete="off" placeholder="QA Manual, testing funcional, SQL..."></textarea></div><div class="field" style="margin-top:10px"><label for="adminCv">Archivo CV (PDF/DOCX/DOC)</label><input id="adminCv" type="file" accept=".pdf,.docx,.doc" autocomplete="off"></div><button class="btn primary" style="margin-top:13px" onclick="publishAdmin()">Publicar mi CV</button></div></div></div></section>
 </main>
 <footer class="footer"><div class="wrap footer-row"><div><b style="color:#fff">Matchar ATS</b><br>Conectando talento con oportunidades.</div><div>© <span id="year"></span> Matchar. Plataforma independiente para el mercado argentino.</div></div><div class="wrap" style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);font-size:12px;color:#D3E2F0">Ante cualquier duda o inconveniente, comunicarse con soporte: <a href="mailto:soportematch.ar@gmail.com" style="color:#9FCBEE;font-weight:700;text-decoration:underline">soportematch.ar@gmail.com</a></div></footer>
-<div class="modal" id="loginModal"><div class="modalbox"><h3>Acceso de administración</h3><p class="muted" style="font-size:13px">Ingresá la clave local configurada en este archivo.</p><div class="field"><label for="adminPassword">Contraseña</label><input id="adminPassword" type="password" autocomplete="current-password"></div><div style="display:flex;gap:8px;margin-top:16px"><button class="btn primary" onclick="loginAdmin()">Ingresar</button><button class="btn outline" onclick="closeLogin()">Cancelar</button></div><p class="hint">La clave de demostración inicial está indicada en el comentario del código. Cambiala antes de publicar, aunque no reemplaza una autenticación real.</p></div></div>
+<div class="modal" id="loginModal"><div class="modalbox"><h3>Acceso de administración</h3><p class="muted" style="font-size:13px">Iniciá sesión con tu cuenta de Supabase (<b>abrahamsafirayael@gmail.com</b>).</p><div class="field"><label for="adminEmail">Correo electrónico</label><input id="adminEmail" type="email" value="abrahamsafirayael@gmail.com" autocomplete="email"></div><div class="field" style="margin-top:10px"><label for="adminPassword">Contraseña</label><input id="adminPassword" type="password" autocomplete="current-password"></div><div style="display:flex;gap:8px;margin-top:16px"><button class="btn primary" onclick="loginAdmin()">Ingresar</button><button class="btn outline" onclick="closeLogin()">Cancelar</button></div><p class="hint">Si entraste a Supabase con GitHub y no tenés contraseña en el correo, podés configurarla en Authentication → Users o usar "Forgot password" en Supabase Auth.</p></div></div>
 <div class="toast" id="toast"></div>
-<!-- Librerías de lectura: PDF.js y Mammoth se cargan desde CDN. Para uso sin internet, descargá también sus archivos y ajustá estas rutas. -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.8.0/mammoth.browser.min.js"></script>
 <script>
-/* MATCHAR ATS - DEMO ESTÁTICA
-   Clave de administración inicial: MatcharAdmin2026!
-   IMPORTANTE: cualquier contraseña incluida en HTML/JS es visible para cualquier visitante.
-   No usar este mecanismo para proteger datos reales. Para producción se requiere backend,
-   autenticación del lado servidor, almacenamiento privado y validación de pagos.
-*/
-const ADMIN_PASSWORD = "MatcharAdmin2026!";
-const DB_NAME="matcharATS_local_v1", STORE="profiles";
+const SUPABASE_URL = "https://lstgvlmrgbohhnolivjj.supabase.co";[cite: 2, 8]
+const SUPABASE_KEY = "sb_publishable_xIuTRulWyxe5S6187n7crA_Hj2Rq3qA";
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
 const DEFAULT_AREAS = [
- {id:"it",name:"Área IT",visible:true},
- {id:"rrhh",name:"Área RRHH",visible:true},
- {id:"ventas",name:"Vendedores",visible:true},
- {id:"marketing",name:"Marketing",visible:true},
- {id:"bizdev",name:"Business Developer",visible:true}
+  {id:"it",name:"Área IT",visible:true},
+  {id:"rrhh",name:"Área RRHH",visible:true},
+  {id:"ventas",name:"Vendedores",visible:true},
+  {id:"marketing",name:"Marketing",visible:true},
+  {id:"bizdev",name:"Business Developer",visible:true}
 ];
 const DEFAULT_TEXTS = {
- heroTitle:"Tu próximo paso profesional empieza con una buena conexión.",
- heroDesc:"Matchar ATS ayuda a presentar tu experiencia de forma clara, detectar oportunidades de mejora en tu CV y acercarte a quienes buscan talento. Una plataforma simple, accesible y pensada para el mercado argentino: menos barreras, más posibilidades.",
- howTitle:"Una herramienta concreta para avanzar",
- postTitle:"Evaluá y publicá tu perfil",
- dirTitle:"Directorio de talento",
- tipMessage:"Por la buena onda y el mantenimiento de la página, podés sumar una propina opcional."
+  heroTitle:"Tu próximo paso profesional empieza con una buena conexión.",
+  heroDesc:"Matchar ATS ayuda a presentar tu experiencia de forma clara, detectar oportunidades de mejora en tu CV y acercarte a quienes buscan talento. Una plataforma simple, accesible y pensada para el mercado argentino: menos barreras, más posibilidades.",
+  howTitle:"Una herramienta concreta para avanzar",
+  postTitle:"Evaluá y publicá tu perfil",
+  dirTitle:"Directorio de talento",
+  tipMessage:"Por la buena onda y el mantenimiento de la página, podés sumar una propina opcional."
 };
-let db, currentCandidate=null, analysisDone=false, adminSession=false, activeAreaFilter="ALL", selectedTip=0, editingProfileId=null;
-const $=id=>document.getElementById(id);
-const money=n=>new Intl.NumberFormat("es-AR",{style:"currency",currency:"ARS",maximumFractionDigits:0}).format(Number(n)||0);
-function toast(msg){const t=$("toast");t.textContent=msg;t.style.display="block";clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.style.display="none",3200)}
-function openDB(){return new Promise((resolve,reject)=>{const r=indexedDB.open(DB_NAME,1);r.onupgradeneeded=()=>r.result.createObjectStore(STORE,{keyPath:"id"});r.onsuccess=()=>{db=r.result;resolve(db)};r.onerror=()=>reject(r.error)})}
-function putProfile(v){return new Promise((res,rej)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).put(v);tx.oncomplete=()=>res();tx.onerror=()=>rej(tx.error)})}
-function deleteProfile(id){return new Promise((res,rej)=>{const tx=db.transaction(STORE,"readwrite");tx.objectStore(STORE).delete(id);tx.oncomplete=()=>res();tx.onerror=()=>rej(tx.error)})}
-function getProfiles(){return new Promise((res,rej)=>{const r=db.transaction(STORE).objectStore(STORE).getAll();r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})}
+
+let currentCandidate = null, analysisDone = false, adminSession = false, activeAreaFilter = "ALL", selectedTip = 0, editingProfileId = null;
+const $ = id => document.getElementById(id);
+const money = n => new Intl.NumberFormat("es-AR",{style:"currency",currency:"ARS",maximumFractionDigits:0}).format(Number(n)||0);
+function toast(msg){const t=$("toast");t.textContent=msg;t.style.display="block";clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.style.display="none",3400)}
+
 function getAreas(){
- try{const raw=JSON.parse(localStorage.getItem("matchar_areas")||"null");return Array.isArray(raw)&&raw.length?raw:DEFAULT_AREAS.map(x=>({...x}))}
- catch{return DEFAULT_AREAS.map(x=>({...x}))}
+  try{const raw=JSON.parse(localStorage.getItem("matchar_areas")||"null");return Array.isArray(raw)&&raw.length?raw:DEFAULT_AREAS.map(x=>({...x}))}
+  catch{return DEFAULT_AREAS.map(x=>({...x}))}
 }
 function saveAreas(list){localStorage.setItem("matchar_areas",JSON.stringify(list))}
 function getTexts(){
- try{return {...DEFAULT_TEXTS,...(JSON.parse(localStorage.getItem("matchar_texts")||"{}"))}}
- catch{return {...DEFAULT_TEXTS}}
+  try{return {...DEFAULT_TEXTS,...(JSON.parse(localStorage.getItem("matchar_texts")||"{}"))}}
+  catch{return {...DEFAULT_TEXTS}}
 }
 function settings(){
- return {
-  fee:Number(localStorage.getItem("matchar_fee")??10000),
-  wa:localStorage.getItem("matchar_wa")||"",
-  showHow:localStorage.getItem("matchar_show_how")!=="0",
-  showPost:localStorage.getItem("matchar_show_post")!=="0",
-  showDir:localStorage.getItem("matchar_show_dir")!=="0",
-  paymentEnabled:localStorage.getItem("matchar_payment_enabled")!=="0",
-  tipEnabled:localStorage.getItem("matchar_tip_enabled")!=="0"
- }
+  return {
+    fee:Number(localStorage.getItem("matchar_fee")??10000),
+    wa:localStorage.getItem("matchar_wa")||"",
+    showHow:localStorage.getItem("matchar_show_how")!=="0",
+    showPost:localStorage.getItem("matchar_show_post")!=="0",
+    showDir:localStorage.getItem("matchar_show_dir")!=="0",
+    paymentEnabled:localStorage.getItem("matchar_payment_enabled")!=="0",
+    tipEnabled:localStorage.getItem("matchar_tip_enabled")!=="0"
+  }
 }
+
 function validateStrictLocation(val){
- const parts=(val||"").split(",").map(s=>s.trim()).filter(Boolean);
- if(parts.length<4)return null;
- const city=parts[0];
- const cp=parts[1];
- const province=parts[2];
- const country=parts.slice(3).join(", ");
- if(!city||!cp||!province||!country)return null;
- return `${city}, ${cp}, ${province}, ${country}`;
+  const parts=(val||"").split(",").map(s=>s.trim()).filter(Boolean);
+  if(parts.length<4)return null;
+  const city=parts[0], cp=parts[1], province=parts[2], country=parts.slice(3).join(", ");
+  if(!city||!cp||!province||!country)return null;
+  return `${city}, ${cp}, ${province}, ${country}`;
 }
 function normalizeArWhatsapp(raw){
- let n=(raw||"").replace(/\D/g,"");
- if(n.startsWith("0"))n=n.slice(1);
- if(n.startsWith("54"))n=n.slice(2);
- return n;
+  let n=(raw||"").replace(/\D/g,"");
+  if(n.startsWith("0"))n=n.slice(1);
+  if(n.startsWith("54"))n=n.slice(2);
+  return n;
 }
+function escapeHtml(s){
+  return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+}
+
 function applyVisibilityAndTexts(){
- const s=settings(), tx=getTexts();
- $("heroTitle").textContent=tx.heroTitle;
- $("heroDesc").textContent=tx.heroDesc;
- $("howTitle").textContent=tx.howTitle;
- $("postTitle").textContent=tx.postTitle;
- $("dirTitle").textContent=tx.dirTitle;
- $("tipMessage").textContent=tx.tipMessage;
- $("como-funciona").classList.toggle("hidden",!s.showHow);
- $("postular").classList.toggle("hidden",!s.showPost);
- $("directorio").classList.toggle("hidden",!s.showDir);
- $("paymentSectionInner").classList.toggle("hidden",!s.paymentEnabled);
- $("heroPriceRow").classList.toggle("hidden",!s.paymentEnabled);
- $("paidConfirmRow").classList.toggle("hidden",!s.paymentEnabled);
- $("tipBox").classList.toggle("hidden",!s.tipEnabled);
- $("paidBtn").textContent=s.paymentEnabled?"Informar pago realizado":"Enviar solicitud de publicación";
- if(adminSession){
-  $("toggleHow").checked=s.showHow;
-  $("togglePost").checked=s.showPost;
-  $("toggleDir").checked=s.showDir;
-  $("togglePayment").checked=s.paymentEnabled;
-  $("toggleTip").checked=s.tipEnabled;
-  $("tipText").value=tx.tipMessage;
-  $("editHeroTitle").value=tx.heroTitle;
-  $("editHeroDesc").value=tx.heroDesc;
-  $("editHowTitle").value=tx.howTitle;
-  $("editPostTitle").value=tx.postTitle;
-  $("editDirTitle").value=tx.dirTitle;
- }
+  const s=settings(), tx=getTexts();
+  $("heroTitle").textContent=tx.heroTitle;
+  $("heroDesc").textContent=tx.heroDesc;
+  $("howTitle").textContent=tx.howTitle;
+  $("postTitle").textContent=tx.postTitle;
+  $("dirTitle").textContent=tx.dirTitle;
+  $("tipMessage").textContent=tx.tipMessage;
+  $("heroPrice").textContent=money(s.fee)+" ARS";
+  $("paymentPrice").textContent=money(s.fee)+" ARS";
+  $("como-funciona").classList.toggle("hidden",!s.showHow);
+  $("postular").classList.toggle("hidden",!s.showPost);
+  $("directorio").classList.toggle("hidden",!s.showDir);
+  $("paymentSectionInner").classList.toggle("hidden",!s.paymentEnabled);
+  $("heroPriceRow").classList.toggle("hidden",!s.paymentEnabled);
+  $("paidConfirmRow").classList.toggle("hidden",!s.paymentEnabled);
+  $("tipBox").classList.toggle("hidden",!s.tipEnabled);
+  $("paidBtn").textContent=s.paymentEnabled?"Informar pago realizado":"Enviar solicitud de publicación";
+  if(adminSession){
+    $("fee").value=s.fee;
+    $("whatsapp").value=s.wa;
+    $("toggleHow").checked=s.showHow;
+    $("togglePost").checked=s.showPost;
+    $("toggleDir").checked=s.showDir;
+    $("togglePayment").checked=s.paymentEnabled;
+    $("toggleTip").checked=s.tipEnabled;
+    $("tipText").value=tx.tipMessage;
+    $("editHeroTitle").value=tx.heroTitle;
+    $("editHeroDesc").value=tx.heroDesc;
+    $("editHowTitle").value=tx.howTitle;
+    $("editPostTitle").value=tx.postTitle;
+    $("editDirTitle").value=tx.dirTitle;
+  }
 }
+
 function renderAreaSelectors(){
- const areas=getAreas().filter(a=>a.visible);
- const sel=$("area"), admSel=$("adminArea");
- const prevVal=sel.value;
- sel.innerHTML="";
- admSel.innerHTML="";
- areas.forEach(a=>{
-  const o1=document.createElement("option");o1.value=a.id;o1.textContent=a.name;sel.append(o1);
-  const o2=document.createElement("option");o2.value=a.id;o2.textContent=a.name;admSel.append(o2);
- });
- if(areas.some(a=>a.id===prevVal))sel.value=prevVal;
- const bar=$("areaFilterBar");
- bar.innerHTML="";
- const allBtn=document.createElement("button");
- allBtn.type="button";
- allBtn.className="filterbtn"+(activeAreaFilter==="ALL"?" active":"");
- allBtn.textContent="Todos los apartados";
- allBtn.onclick=()=>{activeAreaFilter="ALL";renderAreaSelectors();renderDirectory()};
- bar.append(allBtn);
- areas.forEach(a=>{
-  const b=document.createElement("button");
-  b.type="button";
-  b.className="filterbtn"+(activeAreaFilter===a.id?" active":"");
-  b.textContent=a.name;
-  b.onclick=()=>{activeAreaFilter=a.id;renderAreaSelectors();renderDirectory()};
-  bar.append(b);
- });
- if(adminSession)renderAreasAdmin();
-}
-function renderAreasAdmin(){
- const list=getAreas(), box=$("areasAdminList");
- box.innerHTML="";
- list.forEach(a=>{
-  const row=document.createElement("div");row.className="area-row";
-  const inp=document.createElement("input");
-  inp.value=a.name;
-  inp.style.cssText="flex:1;border:1px solid #CAD7E2;border-radius:8px;padding:6px 9px;font-size:12px";
-  const saveBtn=document.createElement("button");
-  saveBtn.type="button";saveBtn.className="btn outline small";saveBtn.textContent="Guardar";
-  saveBtn.onclick=()=>{
-   const v=inp.value.trim();if(!v){toast("El nombre no puede estar vacío.");return}
-   const next=getAreas().map(x=>x.id===a.id?{...x,name:v}:x);
-   saveAreas(next);renderAreaSelectors();renderDirectory();renderAdmin();toast("Apartado actualizado.");
-  };
-  const visBtn=document.createElement("button");
-  visBtn.type="button";visBtn.className=(a.visible?"btn soft small":"btn danger small");
-  visBtn.textContent=a.visible?"Visible":"Oculto";
-  visBtn.onclick=()=>{
-   const next=getAreas().map(x=>x.id===a.id?{...x,visible:!x.visible}:x);
-   if(activeAreaFilter===a.id&&a.visible)activeAreaFilter="ALL";
-   saveAreas(next);renderAreaSelectors();renderDirectory();toast("Visibilidad de apartado actualizada.");
-  };
-  row.append(inp,saveBtn,visBtn);
-  box.append(row);
- });
-}
-function addArea(){
- if(!adminSession)return;
- const name=$("newAreaName").value.trim();
- if(!name){toast("Escribí un nombre para el apartado.");return}
- const id=name.toLowerCase().replace(/[^a-z0-9]+/g,"-")+"-"+Date.now().toString().slice(-4);
- const next=[...getAreas(),{id,name,visible:true}];
- saveAreas(next);$("newAreaName").value="";renderAreaSelectors();toast("Apartado agregado.");
-}
-function updatePrices(){
- const s=settings();
- $("heroPrice").textContent=money(s.fee)+" ARS";
- $("paymentPrice").textContent=money(s.fee)+" ARS";
- $("fee").value=s.fee;$("whatsapp").value=s.wa;
- applyVisibilityAndTexts();
-}
-function copyText(s){if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(s).then(()=>toast("Copiado al portapapeles")).catch(()=>toast("No se pudo copiar; seleccioná el dato manualmente"));else{const x=document.createElement("textarea");x.value=s;document.body.append(x);x.select();document.execCommand("copy");x.remove();toast("Copiado")}}
-document.querySelectorAll(".tip-choice").forEach(btn=>{
- btn.addEventListener("click",()=>{
-  selectedTip=Number(btn.dataset.tip)||0;
-  $("customTip").value="";
-  $("selectedTipLabel").textContent=money(selectedTip);
- });
-});
-$("customTip").addEventListener("input",()=>{
- const v=Number($("customTip").value);
- selectedTip=Number.isFinite(v)&&v>0?v:0;
- $("selectedTipLabel").textContent=money(selectedTip);
-});
-$("cv").addEventListener("change",()=>{$("fileName").textContent=$("cv").files[0]?$("cv").files[0].name:"";analysisDone=false;$("scoreBox").style.display="none";$("paymentBox").style.display="none"});
-async function extractText(file){
- const ext=file.name.toLowerCase().split(".").pop();
- if(ext==="pdf"){
-  if(!window.pdfjsLib)throw Error("No se pudo cargar el lector PDF. Revisá tu conexión a internet.");
-  pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
-  const pdf=await pdfjsLib.getDocument({data:await file.arrayBuffer()}).promise;let out="";
-  for(let i=1;i<=Math.min(pdf.numPages,20);i++){const page=await pdf.getPage(i);const c=await page.getTextContent();out+=c.items.map(x=>x.str).join(" ")+" ";}
-  return out;
- }
- if(ext==="docx"){
-  if(!window.mammoth)throw Error("No se pudo cargar el lector Word. Revisá tu conexión a internet.");
-  const r=await mammoth.extractRawText({arrayBuffer:await file.arrayBuffer()});return r.value||"";
- }
- if(ext==="doc")throw Error("El formato .DOC antiguo no se puede analizar de forma fiable en el navegador. Guardá el documento como .DOCX o PDF y volvé a subirlo. Podés adjuntar el .DOC para publicación, pero el análisis automático no estará disponible.");
- throw Error("Formato no compatible.");
-}
-function scoreCV(text){
- const t=text.toLowerCase(), tips=[];let score=0;
- const checks=[["Datos de contacto",/(mail|@|tel[eé]fono|celular|linkedin)/i,15],["Experiencia laboral",/(experiencia|puesto|empresa|responsabilidades|laboral)/i,20],["Educación",/(educaci[oó]n|estudios|universidad|secundario|formaci[oó]n)/i,15],["Habilidades",/(habilidades|competencias|conocimientos|skills)/i,15],["Logros o resultados",/(logr[oó]|resultados|mejor[eé]|increment|reduj|optimiz)/i,15],["Palabras clave técnicas",/(excel|sql|python|gesti[oó]n|ventas|proyectos|an[aá]lisis|testing|atenci[oó]n)/i,10],["Extensión legible",t.trim().length>700,10]];
- for(const [label,re,pts] of checks){if(re instanceof RegExp?re.test(t):re)score+=pts;else tips.push("Incorporá o revisá la sección: "+label+".")}
- if(t.trim().length<400)tips.push("El texto extraído es breve. Verificá que el CV no sea una imagen escaneada y que incluya información suficiente.");
- if(!/https?:|linkedin\.com/i.test(t))tips.push("Si corresponde, agregá un enlace profesional (por ejemplo, LinkedIn o portfolio).");
- if(!/\d{4}/.test(t))tips.push("Incluí fechas claras en experiencia y formación para facilitar la lectura cronológica.");
- return {score,tips};
-}
-$("analyzeBtn").addEventListener("click",async()=>{const f=$("cv").files[0];if(!f){toast("Adjuntá tu CV antes de analizarlo.");return}if(f.size>8*1024*1024){toast("El archivo supera el máximo recomendado de 8 MB.");return}const b=$("analyzeBtn");b.disabled=true;b.textContent="Analizando…";try{const text=await extractText(f);const result=scoreCV(text);$("scoreValue").textContent=result.score;$("scoreBar").style.width=result.score+"%";$("suggestions").innerHTML="";(result.tips.length?result.tips:["El CV incluye las secciones principales detectables. Revisá igualmente ortografía, claridad y adaptación a cada búsqueda."]).forEach(t=>{const li=document.createElement("li");li.textContent=t;$("suggestions").append(li)});$("scoreBox").style.display="block";analysisDone=true;toast("Análisis finalizado")}catch(e){toast(e.message)}finally{b.disabled=false;b.textContent="Analizar CV gratis"}});
-$("candidateForm").addEventListener("submit",e=>{
- e.preventDefault();
- if(!$("cv").files[0]){toast("Adjuntá tu CV.");return}
- if(!$("name").value.trim()||!$("email").value.trim()||!$("role").value.trim())return;
- const wa=normalizeArWhatsapp($("whatsappInput").value);
- if(wa.length<8){toast("Ingresá un número de WhatsApp válido (código de área + número, sin +54).");$("whatsappInput").focus();return}
- const loc=validateStrictLocation($("location").value);
- if(!loc){toast("Completá la ubicación obligatoria con formato: [Ciudad, Código Postal, Provincia, País].");$("location").focus();return}
- if(!analysisDone){toast("Primero analizá tu CV para continuar.");return}
- currentCandidate={
-  name:$("name").value.trim(),
-  email:$("email").value.trim(),
-  whatsapp:wa,
-  area:$("area").value,
-  modality:$("modality").value,
-  role:$("role").value.trim(),
-  location:loc,
-  skills:$("skills").value.trim()
- };
- $("paymentBox").style.display="block";
- $("paymentBox").scrollIntoView({behavior:"smooth",block:"center"});
-});
-$("paidBtn").addEventListener("click",async()=>{
- const s=settings();
- if(s.paymentEnabled&&!$("paidConfirm").checked){toast("Confirmá la declaración de transferencia.");return}
- if(!currentCandidate||!$("cv").files[0]){toast("Completá el formulario nuevamente.");return}
- try{
-  const file=$("cv").files[0];
-  const tipAmount=s.tipEnabled?selectedTip:0;
-  const p={...currentCandidate,tip:tipAmount,id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),status:"pending",created:new Date().toISOString(),fileName:file.name,fileBlob:file,score:Number($("scoreValue").textContent),source:"candidate"};
-  await putProfile(p);
-  $("candidateForm").reset();
-  selectedTip=0;$("selectedTipLabel").textContent=money(0);
-  $("scoreBox").style.display="none";$("paymentBox").style.display="none";$("fileName").textContent="";
-  currentCandidate=null;analysisDone=false;
-  toast("Solicitud guardada como pendiente en este navegador.");
-  renderAdmin();
- }catch(e){toast("No se pudo guardar. Puede faltar espacio de almacenamiento.")}
-});
-function openAdmin(e){if(e)e.preventDefault();if(adminSession){showAdmin();return} $("loginModal").classList.add("show");$("adminPassword").focus()}
-function closeLogin(){$("loginModal").classList.remove("show");$("adminPassword").value=""}
-function loginAdmin(){if($("adminPassword").value!==ADMIN_PASSWORD){toast("Contraseña incorrecta.");return}adminSession=true;closeLogin();showAdmin()}
-function showAdmin(){$("admin").style.display="block";$("admin").scrollIntoView({behavior:"smooth"});renderAdmin();renderAreasAdmin();updatePrices()}
-function logoutAdmin(){adminSession=false;editingProfileId=null;$("admin").style.display="none";toast("Sesión cerrada")}
-function saveSettings(){
- if(!adminSession)return;
- const fee=Number($("fee").value);
- if(!Number.isFinite(fee)||fee<0){toast("Ingresá una tarifa válida.");return}
- localStorage.setItem("matchar_fee",String(fee));
- localStorage.setItem("matchar_wa",normalizeArWhatsapp($("whatsapp").value));
- localStorage.setItem("matchar_show_how",$("toggleHow").checked?"1":"0");
- localStorage.setItem("matchar_show_post",$("togglePost").checked?"1":"0");
- localStorage.setItem("matchar_show_dir",$("toggleDir").checked?"1":"0");
- localStorage.setItem("matchar_payment_enabled",$("togglePayment").checked?"1":"0");
- localStorage.setItem("matchar_tip_enabled",$("toggleTip").checked?"1":"0");
- const texts={
-  heroTitle:$("editHeroTitle").value.trim()||DEFAULT_TEXTS.heroTitle,
-  heroDesc:$("editHeroDesc").value.trim()||DEFAULT_TEXTS.heroDesc,
-  howTitle:$("editHowTitle").value.trim()||DEFAULT_TEXTS.howTitle,
-  postTitle:$("editPostTitle").value.trim()||DEFAULT_TEXTS.postTitle,
-  dirTitle:$("editDirTitle").value.trim()||DEFAULT_TEXTS.dirTitle,
-  tipMessage:$("tipText").value.trim()||DEFAULT_TEXTS.tipMessage
- };
- localStorage.setItem("matchar_texts",JSON.stringify(texts));
- updatePrices();
- toast("Configuración guardada en este navegador.");
-}
-async function renderAdmin(){
- if(!adminSession)return;
- const areas=getAreas();
- const areasMap=Object.fromEntries(areas.map(a=>[a.id,a.name]));
- const allProfiles=await getProfiles();
- const ps=allProfiles.filter(x=>x.status==="pending");
- const box=$("pendingList");box.innerHTML="";
- if(!ps.length){box.innerHTML='<p class="muted">No hay solicitudes pendientes en este navegador.</p>'}
- else{
-  ps.forEach(p=>{
-   const d=document.createElement("div");d.className="pending";
-   const h=document.createElement("div");h.style.display="flex";h.style.justifyContent="space-between";h.innerHTML=`<h4></h4><span class="status">PENDIENTE</span>`;h.querySelector("h4").textContent=p.name;d.append(h);
-   const info=document.createElement("p");info.className="hint";
-   const areaLabel=areasMap[p.area]||p.area||"General";
-   const modLabel=p.modality||"Remoto";
-   const locLabel=p.location||"Sin ubicación";
-   const waLabel=p.whatsapp?` · WA: ${p.whatsapp}`:"";
-   const tipLabel=p.tip?` · Propina: ${money(p.tip)}`:"";
-   info.textContent=`${p.role} · ${areaLabel} · ${modLabel} · [${locLabel}]${waLabel} · ${p.email||"Admin"} · ${p.fileName}${tipLabel}`;
-   d.append(info);
-   const actions=document.createElement("div");actions.style.display="flex";actions.style.gap="7px";
-   const approve=document.createElement("button");approve.className="btn primary small";approve.textContent="Aprobar";approve.onclick=()=>approveProfile(p.id);
-   const reject=document.createElement("button");reject.className="btn danger small";reject.textContent="Rechazar";reject.onclick=()=>rejectProfile(p.id);
-   const dl=document.createElement("button");dl.className="btn outline small";dl.textContent="Ver CV";dl.onclick=()=>downloadCV(p.id);
-   actions.append(approve,reject,dl);d.append(actions);box.append(d);
+  const areas=getAreas().filter(a=>a.visible);
+  const sel=$("area"), admSel=$("adminArea");
+  const prevVal=sel.value;
+  sel.innerHTML="";
+  admSel.innerHTML="";
+  areas.forEach(a=>{
+    const o1=document.createElement("option");o1.value=a.id;o1.textContent=a.name;sel.append(o1);
+    const o2=document.createElement("option");o2.value=a.id;o2.textContent=a.name;admSel.append(o2);
   });
- }
- const pub=allProfiles.filter(x=>x.status==="approved");
- const pubBox=$("publishedList");pubBox.innerHTML="";
- if(!pub.length){pubBox.innerHTML='<p class="muted">No hay perfiles publicados en este navegador.</p>';return}
- pub.forEach(p=>{
-  const d=document.createElement("div");d.className="pending";
-  const h=document.createElement("div");h.style.display="flex";h.style.justifyContent="space-between";h.innerHTML=`<h4></h4><span class="verified">✓ PUBLICADO</span>`;h.querySelector("h4").textContent=p.name;d.append(h);
-  const info=document.createElement("p");info.className="hint";
-  const areaLabel=areasMap[p.area]||p.area||"General";
-  const modLabel=p.modality||"Remoto";
-  const locLabel=p.location||"Sin ubicación";
-  const waLabel=p.whatsapp?` · WA: ${p.whatsapp}`:"";
-  info.textContent=`${p.role} · ${areaLabel} · ${modLabel} · [${locLabel}]${waLabel} · ${p.fileName}`;
-  d.append(info);
-  const actions=document.createElement("div");actions.style.display="flex";actions.style.gap="7px";actions.style.flexWrap="wrap";
-  const editBtn=document.createElement("button");editBtn.type="button";editBtn.className="btn soft small";editBtn.textContent=editingProfileId===p.id?"Cerrar edición":"Editar";
-  editBtn.onclick=()=>{editingProfileId=editingProfileId===p.id?null:p.id;renderAdmin()};
-  const dl=document.createElement("button");dl.type="button";dl.className="btn outline small";dl.textContent="Ver CV";dl.onclick=()=>downloadCV(p.id);
-  const del=document.createElement("button");del.type="button";del.className="btn danger small";del.textContent="Borrar";del.onclick=()=>removePublishedProfile(p.id);
-  actions.append(editBtn,dl,del);d.append(actions);
+  if(prevVal && [...sel.options].some(o=>o.value===prevVal)) sel.value=prevVal;
+}
 
-  if(editingProfileId===p.id){
-   const eb=document.createElement("div");eb.className="edit-box";
-   const fName=document.createElement("input");fName.value=p.name||"";fName.placeholder="Nombre y apellido";
-   const fWa=document.createElement("input");fWa.value=p.whatsapp||"";fWa.placeholder="WhatsApp (sin +54)";
-   const fArea=document.createElement("select");
-   areas.forEach(a=>{const opt=document.createElement("option");opt.value=a.id;opt.textContent=a.name;if(opt.value===p.area)opt.selected=true;fArea.append(opt)});
-   const fMod=document.createElement("select");
-   ["Remoto","Híbrido","Presencial"].forEach(m=>{const opt=document.createElement("option");opt.value=m;opt.textContent=m;if(opt.value===(p.modality||"Remoto"))opt.selected=true;fMod.append(opt)});
-   const fRole=document.createElement("input");fRole.value=p.role||"";fRole.placeholder="Puesto o área";
-   const fLoc=document.createElement("input");fLoc.value=p.location||"";fLoc.placeholder="[Ciudad, Código Postal, Provincia, País]";
-   const fSkills=document.createElement("textarea");fSkills.value=p.skills||"";fSkills.placeholder="Habilidades separadas por coma";fSkills.style.minHeight="64px";
-   [fName,fWa,fArea,fMod,fRole,fLoc,fSkills].forEach(el=>{el.style.cssText+=(el.style.cssText?";":"")+"border:1px solid #CAD7E2;border-radius:8px;padding:7px 9px;font-size:12px;width:100%"});
-   const saveEditBtn=document.createElement("button");saveEditBtn.type="button";saveEditBtn.className="btn primary small";saveEditBtn.textContent="Guardar cambios del perfil";
-   saveEditBtn.onclick=async()=>{
-    const cleanName=fName.value.trim();
-    const cleanRole=fRole.value.trim();
-    const cleanLoc=validateStrictLocation(fLoc.value);
-    if(!cleanName||!cleanRole){toast("Nombre y puesto son obligatorios.");return}
-    if(!cleanLoc){toast("Completá la ubicación con formato: [Ciudad, Código Postal, Provincia, País].");return}
-    const updated={
-     ...p,
-     name:cleanName,
-     whatsapp:normalizeArWhatsapp(fWa.value),
-     area:fArea.value,
-     modality:fMod.value,
-     role:cleanRole,
-     location:cleanLoc,
-     skills:fSkills.value.trim()
-    };
-    await putProfile(updated);
-    editingProfileId=null;
-    renderAdmin();
-    renderDirectory();
-    toast("Perfil publicado actualizado.");
-   };
-   eb.append(fName,fWa,fArea,fMod,fRole,fLoc,fSkills,saveEditBtn);
-   d.append(eb);
+function renderFilterBar(){
+  const bar=$("areaFilterBar");
+  const areas=getAreas().filter(a=>a.visible);
+  bar.innerHTML="";
+  const allBtn=document.createElement("button");
+  allBtn.type="button";
+  allBtn.className="filterbtn"+(activeAreaFilter==="ALL"?" active":"");
+  allBtn.textContent="Todos";
+  allBtn.onclick=()=>{activeAreaFilter="ALL";renderFilterBar();renderDirectory()};
+  bar.append(allBtn);
+  areas.forEach(a=>{
+    const b=document.createElement("button");
+    b.type="button";
+    b.className="filterbtn"+(activeAreaFilter===a.id?" active":"");
+    b.textContent=a.name;
+    b.onclick=()=>{activeAreaFilter=a.id;renderFilterBar();renderDirectory()};
+    bar.append(b);
+  });
+}
+
+async function extractTextFromFile(file){
+  const name=(file.name||"").toLowerCase();
+  if(name.endsWith(".pdf")){
+    if(window.pdfjsLib){
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+      const buf=await file.arrayBuffer();
+      const pdf=await window.pdfjsLib.getDocument({data:buf}).promise;
+      let txt="";
+      for(let i=1;i<=Math.min(pdf.numPages,10);i++){
+        const page=await pdf.getPage(i);
+        const content=await page.getTextContent();
+        txt+=content.items.map(it=>it.str).join(" ")+"\n";
+      }
+      return txt.trim();
+    }
   }
-  pubBox.append(d);
- });
+  if(name.endsWith(".docx") && window.mammoth){
+    const buf=await file.arrayBuffer();
+    const res=await window.mammoth.extractRawText({arrayBuffer:buf});
+    return (res.value||"").trim();
+  }
+  return await file.text().catch(()=>"");
 }
-async function removePublishedProfile(id){
- if(!adminSession)return;
- if(editingProfileId===id)editingProfileId=null;
- await deleteProfile(id);
- renderAdmin();
- renderDirectory();
- toast("Perfil publicado borrado.");
+
+function evaluateATS(text, skillsRaw, role){
+  const clean=(text||"").toLowerCase();
+  const skills=(skillsRaw||"").split(",").map(s=>s.trim()).filter(Boolean);
+  let score=45;
+  const tips=[];
+  if(clean.length>250) score+=15; else tips.push("Sumá más detalle sobre tus experiencias, proyectos o logros concretos.");
+  if(/@/.test(clean) || /\d{8,}/.test(clean)) score+=10; else tips.push("Asegurate de incluir datos de contacto visibles (correo o teléfono).");
+  if(/(experiencia|educación|estudios|formación|proyectos|habilidades)/.test(clean)) score+=10; else tips.push("Usá secciones claras como Experiencia, Educación y Habilidades.");
+  const matched=skills.filter(sk=>clean.includes(sk.toLowerCase()));
+  if(skills.length){
+    score+=Math.min(15,Math.round((matched.length/skills.length)*15));
+    if(matched.length<skills.length) tips.push("Reflejá en el texto de tu CV las habilidades que cargaste en el formulario.");
+  } else {
+    tips.push("Completá tus habilidades principales para mejorar la coincidencia con búsquedas.");
+  }
+  if(role && clean.includes(role.toLowerCase().split(" ")[0])) score+=5;
+  score=Math.min(100,score);
+  if(!tips.length) tips.push("Tu CV tiene una base clara y estructurada para postulaciones.");
+  return {score,tips};
 }
-async function approveProfile(id){const p=(await getProfiles()).find(x=>x.id===id);if(!p)return;p.status="approved";p.approved=new Date().toISOString();await putProfile(p);renderAdmin();renderDirectory();toast("Perfil aprobado y publicado.")}
-async function rejectProfile(id){const p=(await getProfiles()).find(x=>x.id===id);if(!p)return;p.status="rejected";await putProfile(p);renderAdmin();toast("Solicitud rechazada.")}
-async function publishAdmin(){
- if(!adminSession)return;
- const f=$("adminCv").files[0];if(!f){toast("Adjuntá tu CV.");return}
- if(f.size>8*1024*1024){toast("El archivo supera 8 MB.");return}
- const loc=validateStrictLocation($("adminLocation").value);
- if(!loc){toast("Completá la ubicación con formato: [Ciudad, Código Postal, Provincia, País].");$("adminLocation").focus();return}
- const p={
-  id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),
-  name:$("adminName").value.trim()||"Safira Yael Abraham",
-  email:"",
-  whatsapp:normalizeArWhatsapp($("adminWhatsapp").value),
-  area:$("adminArea").value,
-  modality:$("adminModality").value,
-  role:$("adminRole").value.trim()||"Perfil profesional",
-  location:loc,
-  skills:$("adminSkills").value.trim(),
-  status:"approved",
-  created:new Date().toISOString(),
-  fileName:f.name,
-  fileBlob:f,
-  source:"admin"
- };
- try{await putProfile(p);$("adminCv").value="";renderDirectory();renderAdmin();toast("Tu CV fue publicado en este navegador.")}catch(e){toast("No se pudo guardar el archivo.")}
+
+$("analyzeBtn").onclick=async()=>{
+  const file=$("cv").files[0];
+  if(!file){toast("Primero adjuntá un CV en PDF, DOCX o DOC.");return}
+  toast("Analizando CV en este dispositivo...");
+  const text=await extractTextFromFile(file);
+  const {score,tips}=evaluateATS(text,$("skills").value,$("role").value);
+  $("scoreValue").textContent=score;
+  $("scoreBar").style.width=score+"%";
+  $("suggestions").innerHTML=tips.map(t=>`<li>${escapeHtml(t)}</li>`).join("");
+  $("scoreBox").style.display="block";
+  analysisDone=true;
+};
+
+$("cv").onchange=()=>{
+  const f=$("cv").files[0];
+  $("fileName").textContent=f?`Archivo seleccionado: ${f.name} (${(f.size/1024/1024).toFixed(2)} MB)`:"";
+  analysisDone=false;
+};
+
+document.querySelectorAll(".tip-choice").forEach(btn=>{
+  btn.onclick=()=>{
+    selectedTip=Number(btn.dataset.tip)||0;
+    $("customTip").value="";
+    $("selectedTipLabel").textContent=money(selectedTip);
+  };
+});
+$("customTip").oninput=()=>{
+  const v=Math.max(0,Number($("customTip").value)||0);
+  selectedTip=v;
+  $("selectedTipLabel").textContent=money(selectedTip);
+};
+
+function copyText(txt){
+  navigator.clipboard?.writeText(txt).then(()=>toast("Copiado: "+txt)).catch(()=>toast("Copiá manualmente: "+txt));
 }
-async function downloadCV(id){const p=(await getProfiles()).find(x=>x.id===id);if(!p||!p.fileBlob){toast("Archivo no disponible.");return}const url=URL.createObjectURL(p.fileBlob),a=document.createElement("a");a.href=url;a.download=p.fileName||"CV";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500)}
-const WA_MESSAGE="Hola, me contacto de la página Matchar y he visto que mis habilidades coinciden con el perfil que buscas. ¿Tendrías un tiempo libre para poder conversar sobre como mis habilidades podrían aportar con éxito a tú equipo? Muchas gracias. Aguardo tú respuesta.";
-function whatsappLink(customNumber){
- let n=normalizeArWhatsapp(customNumber||"")||normalizeArWhatsapp(settings().wa);
- if(!n){toast("No hay un número de WhatsApp configurado para este perfil.");return null}
- return "https://wa.me/54"+n+"?text="+encodeURIComponent(WA_MESSAGE)
+
+$("candidateForm").onsubmit=async e=>{
+  e.preventDefault();
+  const loc=validateStrictLocation($("location").value);
+  if(!loc){toast("Usá el formato: Ciudad, Código Postal, Provincia, País.");return}
+  const wa=normalizeArWhatsapp($("whatsappInput").value);
+  if(wa.length<8){toast("Ingresá un número de WhatsApp válido (código de área + número).");return}
+  const file=$("cv").files[0];
+  if(!file){toast("Adjuntá tu archivo de CV.");return}
+  if(!analysisDone){
+    const text=await extractTextFromFile(file);
+    const {score,tips}=evaluateATS(text,$("skills").value,$("role").value);
+    $("scoreValue").textContent=score;
+    $("scoreBar").style.width=score+"%";
+    $("suggestions").innerHTML=tips.map(t=>`<li>${escapeHtml(t)}</li>`).join("");
+    $("scoreBox").style.display="block";
+    analysisDone=true;
+  }
+  const s=settings();
+  const skillsArr=$("skills").value.split(",").map(x=>x.trim()).filter(Boolean);
+  currentCandidate={
+    full_name:$("name").value.trim(),
+    email:$("email").value.trim(),
+    whatsapp:wa,
+    area_id:$("area").value,
+    modality:$("modality").value,
+    role:$("role").value.trim(),
+    location:loc,
+    skills:skillsArr,
+    cv_file_name:file.name,
+    cv_url:"",
+    is_approved:false,
+    tip_amount:s.tipEnabled?selectedTip:0,
+    fee_amount:s.paymentEnabled?s.fee:0
+  };
+  $("paymentBox").style.display="block";
+  $("paymentBox").scrollIntoView({behavior:"smooth",block:"nearest"});
+};
+
+$("paidBtn").onclick=async()=>{
+  if(!currentCandidate){toast("Completá primero el formulario de postulación.");return}
+  const s=settings();
+  if(s.paymentEnabled && !$("paidConfirm").checked){
+    toast("Marcá la declaración de que realizaste la transferencia.");
+    return;
+  }
+  const {error}=await sb.from("profiles").insert([currentCandidate]);
+  if(error){
+    console.error(error);
+    toast("Error al guardar la solicitud en Supabase: "+error.message);
+    return;
+  }
+  toast("¡Solicitud enviada! Queda pendiente de aprobación.");
+  currentCandidate=null;
+  analysisDone=false;
+  selectedTip=0;
+  $("selectedTipLabel").textContent="$0";
+  $("paidConfirm").checked=false;
+  $("paymentBox").style.display="none";
+  $("scoreBox").style.display="none";
+  $("fileName").textContent="";
+  $("candidateForm").reset();
+  renderAreaSelectors();
+  if(adminSession) renderAdminLists();
+};
+
+function getAreaName(areaId){
+  const found=getAreas().find(a=>a.id===areaId);
+  return found?found.name:(areaId||"General");
 }
+
 async function renderDirectory(){
- const areas=getAreas();
- const visibleAreaIds=new Set(areas.filter(a=>a.visible).map(a=>a.id));
- const areaNames=Object.fromEntries(areas.map(a=>[a.id,a.name]));
- let all=(await getProfiles()).filter(p=>p.status==="approved"&&(!p.area||visibleAreaIds.has(p.area)));
- if(activeAreaFilter!=="ALL")all=all.filter(p=>p.area===activeAreaFilter);
- const root=$("directory");root.innerHTML="";
- if(!all.length){root.innerHTML='<div class="empty">Todavía no hay perfiles publicados en este apartado. ¡Sé el primero en sumarte!</div>';return}
- all.forEach(p=>{
-  const card=document.createElement("article");card.className="profile";
-  const top=document.createElement("div");top.className="profile-top";
-  const left=document.createElement("div");left.className="profile-name";
-  const av=document.createElement("div");av.className="avatar";av.textContent=(p.name||"M").trim().charAt(0).toUpperCase();
-  const ident=document.createElement("div");
-  const h=document.createElement("h3");h.textContent=p.name;
-  const role=document.createElement("div");role.className="role";
-  const mod=p.modality||"Remoto";
-  const loc=p.location?` · [${p.location}]`:"";
-  role.textContent=`${p.role} · ${mod}${loc}`;
-  ident.append(h,role);left.append(av,ident);
-  const badge=document.createElement("span");badge.className="verified";badge.textContent="✓ APROBADO";
-  top.append(left,badge);card.append(top);
+  const box=$("directory");
+  const {data,error}=await sb
+    .from("profiles")
+    .select("*")
+    .eq("is_approved",true)
+    .order("created_at",{ascending:false});
 
-  const tags=document.createElement("div");tags.className="tags";
-  if(p.area&&areaNames[p.area]){const at=document.createElement("span");at.className="tag";at.textContent=areaNames[p.area];tags.append(at)}
-  const mt=document.createElement("span");mt.className="tag";mt.textContent="Puesto: "+mod;tags.append(mt);
-  if(p.skills){
-   p.skills.split(/[,;\n]/).map(x=>x.trim()).filter(Boolean).slice(0,8).forEach(x=>{
-    const t=document.createElement("span");t.className="tag";t.textContent=x;tags.append(t);
-   });
+  if(error){
+    console.error(error);
+    box.innerHTML='<div class="empty">No se pudo cargar el directorio en este momento.</div>';
+    return;
   }
-  card.append(tags);
+  const visibleAreaIds=new Set(getAreas().filter(a=>a.visible).map(a=>a.id));
+  let list=(data||[]).filter(p=>visibleAreaIds.has(p.area_id));
+  if(activeAreaFilter!=="ALL") list=list.filter(p=>p.area_id===activeAreaFilter);
 
-  const actions=document.createElement("div");actions.className="profile-actions";
-  const cvBtn=document.createElement("button");cvBtn.type="button";cvBtn.className="btn outline small";cvBtn.textContent="Descargar CV";cvBtn.onclick=()=>downloadCV(p.id);
-  const waBtn=document.createElement("button");waBtn.type="button";waBtn.className="btn primary small";waBtn.textContent="Contactar por WhatsApp";
-  waBtn.onclick=()=>{const link=whatsappLink(p.whatsapp);if(link)window.open(link,"_blank","noopener")};
-  actions.append(cvBtn,waBtn);card.append(actions);
-  root.append(card);
- });
+  if(!list.length){
+    box.innerHTML='<div class="empty">Todavía no hay perfiles publicados. ¡Sé el primero en sumarte!</div>';
+    return;
+  }
+  box.innerHTML=list.map(p=>{
+    const initials=(p.full_name||"M").split(" ").slice(0,2).map(w=>w[0]||"").join("").toUpperCase()||"M";
+    const skills=Array.isArray(p.skills)?p.skills:[];
+    const waLink=`https://wa.me/549${encodeURIComponent(p.whatsapp||"")}`;
+    return `
+      <article class="profile">
+        <div class="profile-top">
+          <div class="profile-name">
+            <div class="avatar">${escapeHtml(initials)}</div>
+            <div>
+              <h3>${escapeHtml(p.full_name)}</h3>
+              <div class="role">${escapeHtml(p.role)} · ${escapeHtml(p.modality||"")}</div>
+            </div>
+          </div>
+          <span class="verified">✓ 100% VERIFICADO</span>
+        </div>
+        <div class="hint" style="margin-top:10px">📍 ${escapeHtml(p.location||"")} · <b>${escapeHtml(getAreaName(p.area_id))}</b></div>
+        ${skills.length?`<div class="tags">${skills.map(sk=>`<span class="tag">${escapeHtml(sk)}</span>`).join("")}</div>`:""}
+        ${p.cv_file_name?`<div class="hint">📄 CV: ${escapeHtml(p.cv_file_name)}</div>`:""}
+        <div class="profile-actions">
+          <a class="btn primary small" href="${waLink}" target="_blank" rel="noopener">WhatsApp</a>
+          ${p.cv_url?`<a class="btn outline small" href="${escapeHtml(p.cv_url)}" target="_blank" rel="noopener">Ver enlace CV</a>`:""}
+        </div>
+      </article>`;
+  }).join("");
 }
-$("year").textContent=new Date().getFullYear();
-openDB().then(()=>{renderAreaSelectors();updatePrices();renderDirectory()}).catch(()=>toast("No se pudo iniciar el almacenamiento local."));
+
+function openAdmin(e){
+  if(e) e.preventDefault();
+  if(adminSession){
+    $("admin").style.display="block";
+    $("admin").scrollIntoView({behavior:"smooth"});
+    renderAdminLists();
+    return;
+  }
+  $("loginModal").classList.add("show");
+}
+function closeLogin(){$("loginModal").classList.remove("show")}
+
+async function loginAdmin(){
+  const email=($("adminEmail").value||"").trim();
+  const password=$("adminPassword").value||"";
+  if(!email||!password){toast("Ingresá tu correo y contraseña.");return}
+  const {error}=await sb.auth.signInWithPassword({email,password});
+  if(error){
+    toast("No se pudo iniciar sesión: "+error.message);
+    return;
+  }
+  adminSession=true;
+  closeLogin();
+  $("admin").style.display="block";
+  applyVisibilityAndTexts();
+  renderAreasAdmin();
+  renderAdminLists();
+  $("admin").scrollIntoView({behavior:"smooth"});
+  toast("Sesión de administración iniciada.");
+}
+
+async function logoutAdmin(){
+  await sb.auth.signOut();
+  adminSession=false;
+  editingProfileId=null;
+  $("admin").style.display="none";
+  toast("Sesión cerrada.");
+}
+
+async function renderAdminLists(){
+  const {data,error}=await sb.from("profiles").select("*").order("created_at",{ascending:false});
+  if(error){
+    console.error(error);
+    $("pendingList").innerHTML='<p class="muted">Error al leer solicitudes (verificá que hayas iniciado sesión con tu cuenta admin).</p>';
+    return;
+  }
+  const all=data||[];
+  const pending=all.filter(x=>!x.is_approved);
+  const published=all.filter(x=>x.is_approved);
+
+  $("pendingList").innerHTML=pending.length?pending.map(p=>`
+    <div class="pending">
+      <div style="display:flex;justify-content:space-between;gap:8px;align-items:center">
+        <h4>${escapeHtml(p.full_name)}</h4>
+        <span class="status">PENDIENTE</span>
+      </div>
+      <div class="hint">${escapeHtml(p.role)} · ${escapeHtml(getAreaName(p.area_id))} · ${escapeHtml(p.modality||"")}</div>
+      <div class="hint">📍 ${escapeHtml(p.location||"")} · 📱 ${escapeHtml(p.whatsapp||"")} · ✉️ ${escapeHtml(p.email||"")}</div>
+      <div class="hint">CV: ${escapeHtml(p.cv_file_name||"No adjunto")} · Propina: ${money(p.tip_amount||0)}</div>
+      <div class="profile-actions">
+        <button type="button" class="btn primary small" onclick="approveProfile('${p.id}')">Aprobar</button>
+        <button type="button" class="btn danger small" onclick="removeProfile('${p.id}')">Rechazar / Borrar</button>
+      </div>
+    </div>`).join(""):`<p class="muted">No hay solicitudes pendientes.</p>`;
+
+  $("publishedList").innerHTML=published.length?published.map(p=>{
+    const isEditing=editingProfileId===String(p.id);
+    const skillsStr=Array.isArray(p.skills)?p.skills.join(", "):"";
+    return `
+      <div class="pending">
+        <div style="display:flex;justify-content:space-between;gap:8px;align-items:center">
+          <h4>${escapeHtml(p.full_name)}</h4>
+          <span class="verified">PUBLICADO</span>
+        </div>
+        <div class="hint">${escapeHtml(p.role)} · ${escapeHtml(getAreaName(p.area_id))} · ${escapeHtml(p.location||"")}</div>
+        <div class="profile-actions">
+          <button type="button" class="btn outline small" onclick="startEdit('${p.id}')">Editar</button>
+          <button type="button" class="btn danger small" onclick="removeProfile('${p.id}')">Eliminar</button>
+        </div>
+        ${isEditing?`
+          <div class="edit-box">
+            <input id="ed_name_${p.id}" value="${escapeHtml(p.full_name)}" placeholder="Nombre">
+            <input id="ed_role_${p.id}" value="${escapeHtml(p.role)}" placeholder="Puesto">
+            <input id="ed_loc_${p.id}" value="${escapeHtml(p.location||"")}" placeholder="Ciudad, CP, Provincia, País">
+            <input id="ed_wa_${p.id}" value="${escapeHtml(p.whatsapp||"")}" placeholder="WhatsApp">
+            <input id="ed_skills_${p.id}" value="${escapeHtml(skillsStr)}" placeholder="Habilidades separadas por coma">
+            <div style="display:flex;gap:8px">
+              <button type="button" class="btn primary small" onclick="saveEdit('${p.id}')">Guardar cambios</button>
+              <button type="button" class="btn outline small" onclick="editingProfileId=null;renderAdminLists()">Cancelar</button>
+            </div>
+          </div>`:""}
+      </div>`;
+  }).join(""):`<p class="muted">No hay perfiles publicados.</p>`;
+}
+
+function startEdit(id){editingProfileId=String(id);renderAdminLists()}
+
+async function saveEdit(id){
+  const full_name=($(`ed_name_${id}`).value||"").trim();
+  const role=($(`ed_role_${id}`).value||"").trim();
+  const location=validateStrictLocation($(`ed_loc_${id}`).value);
+  const whatsapp=normalizeArWhatsapp($(`ed_wa_${id}`).value);
+  const skills=($(`ed_skills_${id}`).value||"").split(",").map(s=>s.trim()).filter(Boolean);
+  if(!full_name||!role||!location){toast("Completá nombre, puesto y ubicación válida (Ciudad, CP, Provincia, País).");return}
+  const {error}=await sb.from("profiles").update({full_name,role,location,whatsapp,skills}).eq("id",id);
+  if(error){toast("Error al guardar: "+error.message);return}
+  editingProfileId=null;
+  toast("Perfil actualizado.");
+  renderAdminLists();
+  renderDirectory();
+}
+
+async function approveProfile(id){
+  const {error}=await sb.from("profiles").update({is_approved:true}).eq("id",id);
+  if(error){toast("Error al aprobar: "+error.message);return}
+  toast("Perfil aprobado y visible en el directorio.");
+  renderAdminLists();
+  renderDirectory();
+}
+
+async function removeProfile(id){
+  if(!confirm("¿Eliminar este registro de forma permanente?"))return;
+  const {error}=await sb.from("profiles").delete().eq("id",id);
+  if(error){toast("Error al eliminar: "+error.message);return}
+  toast("Registro eliminado.");
+  renderAdminLists();
+  renderDirectory();
+}
+
+function renderAreasAdmin(){
+  const list=getAreas();
+  $("areasAdminList").innerHTML=list.map((a,idx)=>`
+    <div class="area-row">
+      <input value="${escapeHtml(a.name)}" onchange="renameArea(${idx},this.value)" style="flex:1;border:1px solid #CAD7E2;border-radius:8px;padding:6px 9px;font-size:12px">
+      <label style="font-size:12px;display:flex;align-items:center;gap:4px">
+        <input type="checkbox" ${a.visible?"checked":""} onchange="toggleArea(${idx},this.checked)"> Visible
+      </label>
+    </div>`).join("");
+}
+function renameArea(idx,val){const list=getAreas();if(!val.trim())return;list[idx].name=val.trim();saveAreas(list);renderAreaSelectors();renderFilterBar();renderDirectory()}
+function toggleArea(idx,vis){const list=getAreas();list[idx].visible=vis;saveAreas(list);renderAreaSelectors();renderFilterBar();renderDirectory()}
+function addArea(){
+  const name=($("newAreaName").value||"").trim();
+  if(!name)return;
+  const id=name.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||("area-"+Date.now());
+  const list=getAreas();
+  list.push({id,name,visible:true});
+  saveAreas(list);
+  $("newAreaName").value="";
+  renderAreasAdmin();
+  renderAreaSelectors();
+  renderFilterBar();
+}
+
+function saveSettings(){
+  localStorage.setItem("matchar_fee",String(Math.max(0,Number($("fee").value)||0)));
+  localStorage.setItem("matchar_wa",normalizeArWhatsapp($("whatsapp").value));
+  localStorage.setItem("matchar_show_how",$("toggleHow").checked?"1":"0");
+  localStorage.setItem("matchar_show_post",$("togglePost").checked?"1":"0");
+  localStorage.setItem("matchar_show_dir",$("toggleDir").checked?"1":"0");
+  localStorage.setItem("matchar_payment_enabled",$("togglePayment").checked?"1":"0");
+  localStorage.setItem("matchar_tip_enabled",$("toggleTip").checked?"1":"0");
+  const texts={
+    heroTitle:($("editHeroTitle").value||DEFAULT_TEXTS.heroTitle).trim(),
+    heroDesc:($("editHeroDesc").value||DEFAULT_TEXTS.heroDesc).trim(),
+    howTitle:($("editHowTitle").value||DEFAULT_TEXTS.howTitle).trim(),
+    postTitle:($("editPostTitle").value||DEFAULT_TEXTS.postTitle).trim(),
+    dirTitle:($("editDirTitle").value||DEFAULT_TEXTS.dirTitle).trim(),
+    tipMessage:($("tipText").value||DEFAULT_TEXTS.tipMessage).trim()
+  };
+  localStorage.setItem("matchar_texts",JSON.stringify(texts));
+  applyVisibilityAndTexts();
+  renderDirectory();
+  toast("Configuración guardada.");
+}
+
+async function publishAdmin(){
+  const full_name=($("adminName").value||"").trim();
+  const whatsapp=normalizeArWhatsapp($("adminWhatsapp").value);
+  const area_id=$("adminArea").value;
+  const modality=$("adminModality").value;
+  const role=($("adminRole").value||"").trim();
+  const location=validateStrictLocation($("adminLocation").value);
+  const skills=($("adminSkills").value||"").split(",").map(s=>s.trim()).filter(Boolean);
+  const file=$("adminCv").files[0];
+  if(!full_name||!role||!location){toast("Completá nombre, puesto y ubicación válida (Ciudad, CP, Provincia, País).");return}
+  const {data:{session}}=await sb.auth.getSession();
+  const {error}=await sb.from("profiles").insert([{
+    full_name,
+    email:session?.user?.email||"abrahamsafirayael@gmail.com",
+    whatsapp,
+    area_id,
+    modality,
+    role,
+    location,
+    skills,
+    cv_file_name:file?file.name:"",
+    cv_url:"",
+    is_approved:true,
+    tip_amount:0,
+    fee_amount:0
+  }]);
+  if(error){toast("Error al publicar: "+error.message);return}
+  $("adminRole").value="";
+  $("adminSkills").value="";
+  $("adminCv").value="";
+  toast("Perfil publicado directamente en el directorio.");
+  renderAdminLists();
+  renderDirectory();
+}
+
+document.addEventListener("DOMContentLoaded",async()=>{
+  $("year").textContent=new Date().getFullYear();
+  renderAreaSelectors();
+  renderFilterBar();
+  applyVisibilityAndTexts();
+  await renderDirectory();
+  const {data:{session}}=await sb.auth.getSession();
+  if(session && session.user?.email==="abrahamsafirayael@gmail.com"){
+    adminSession=true;
+    $("admin").style.display="block";
+    applyVisibilityAndTexts();
+    renderAreasAdmin();
+    renderAdminLists();
+  }
+});
 </script>
 </body>
 </html>
